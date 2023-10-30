@@ -20,7 +20,7 @@ public class CustomDynamicArray {
         count = 0;
     }
 
-    // 1.
+    // 1. O(1) - один элемент = одно действие
     public void add(int element) {
         if (count >= size) {
             growSize();
@@ -28,7 +28,7 @@ public class CustomDynamicArray {
         data[count++] = element;
     }
 
-    // 2.
+    // 2. О(n) - сдвигаем общее количество элементов n при добавлении элемента с указанным индексом
     public void addAt(int index, int element) {
         if (index >= count) throw new IndexOutOfBoundsException("Input index is out of bounds");
         if (count >= size) {
@@ -41,14 +41,14 @@ public class CustomDynamicArray {
         count++;
     }
 
-    // 3.
+    // 3. O(1) - один элемент = одно действие
     public void remove() {
         if (count == 0) throw new NoSuchElementException();
         data[count - 1] = 0;
         count--;
     }
 
-    // 4.
+    // 4. О(n) - сдвигаем общее количество элементов n при удалении элемента с указанным индексом
     public void removeAt(int index) {
         if (index < 0 || index >= size) {
             System.out.println("Index is out of bounds");
@@ -59,7 +59,7 @@ public class CustomDynamicArray {
         size--;
     }
 
-    // 5.
+    // 5. О(n) - уменьшение размера массива происходит через копирование оставшихся элементов n в новый массив
     public void shrinkSize() {
         if (count < size) {
             int[] newData = new int[count];
@@ -69,7 +69,7 @@ public class CustomDynamicArray {
         }
     }
 
-    // 6.
+    // 6. O(1) - один элемент = одно действие (запись нового значения) по указанному индексу
     public void set(int index, int newData) {
         if (index < 0 || index >= count) {
             System.out.println("Index is out of bounds");
@@ -77,7 +77,7 @@ public class CustomDynamicArray {
         data[index] = newData;
     }
 
-    // 7.
+    // 7. O(1) - один элемент = одно действие (считывание значения) по указанному индексу
     public int get(int index) {
         if (index < 0 || index >= count) {
             System.out.println("Index is out of bounds");
@@ -85,12 +85,12 @@ public class CustomDynamicArray {
         return data[index];
     }
 
-    // 8.
+    // 8. O(1) - один элемент = одно действие
     public void clear() {
         count = 0;
     }
 
-    // 9.
+    // 9. О(n) - перебор всех значений через простой цикл
     public boolean contains(int d) {
         for (int i = 0; i < size; i++) {
             if (d == 0) {
@@ -106,7 +106,7 @@ public class CustomDynamicArray {
         return false;
     }
 
-    // 10.
+    // 10. O(1) - одно действие
     public boolean isEmpty() {
         if (size != 0) {
             return false;
@@ -114,12 +114,12 @@ public class CustomDynamicArray {
         return true;
     }
 
-    // 11.
+    // 11. O(1) - проверяет один элемент = одно действие
     public boolean hasNext() {
         return count < size;
     }
 
-    // 12.
+    // 12. O(1) - один элемент = одно действие
     public int next() {
         if (hasNext()) {
             return data[count++];
@@ -128,6 +128,7 @@ public class CustomDynamicArray {
         }
     }
 
+    // О(n) - перебор всех значений через простой цикл
     private void growSize() {
         int[] newData = new int[2 * size];
         for (int i = 0; i < count; i++) {
