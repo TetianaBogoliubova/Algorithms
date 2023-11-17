@@ -28,18 +28,19 @@ public class CustomQueue {
     }
 
     public void enqueue3(int element) {
-        if (tail == data.length - 1) {
-            int[] newData = new int[data.length * 2];
-            for (int i = head + 1, j = 0; i <= tail; i++, j++) {
-                newData[j] = data[i];
-            }
-            data = newData;
-            tail = (head + 1);
-            head = -1;
+        if (head == -1) {
+            head = tail = 0;
+            data[head] = element;
+        } else if (tail == data.length - 1) {
+            head = 0;
+            data[tail] = element;
+        } else if (head != 0) {
+            head--;
+            data[head] = element;
+        } else {
+            System.out.println("Queue is full. Cannot enqueue element.");
         }
-        data[++tail] = element;
-        System.out.println("Add element in full queue: " + element);
-        System.out.println("New size of queue: " + data.length);
+        System.out.println("Add element: " + element);
     }
 
     public int dequeue() {
@@ -55,9 +56,12 @@ public class CustomQueue {
     }
 
     public int size() {
-        return tail - head + 1;
+        if (head == -1 && tail == -1) {
+            return 0;
+        } else {
+            return tail - head + 1;
+        }
     }
-
     public static void main(String[] args) {
 
         CustomQueue queue = new CustomQueue(5);
