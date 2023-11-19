@@ -1,4 +1,4 @@
-package org.example.homework_17_10_23;
+package org.example.homework_23_10_17;
 
 public class Task1 {
 //     1 уровень сложности: 1. Вычислить n-й член последовательности, заданной формулами:

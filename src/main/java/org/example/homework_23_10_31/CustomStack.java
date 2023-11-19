@@ -1,4 +1,4 @@
-package org.example.homework_31_10_23;
+package org.example.homework_23_10_31;
 
 public class CustomStack {
     // 1. Реализовать метод search() у написанного на занятии стека CustomStack (см. код в репозитории).

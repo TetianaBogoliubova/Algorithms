@@ -1,4 +1,4 @@
-package org.example.homework_24_10_23;
+package org.example.homework_23_10_24;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;

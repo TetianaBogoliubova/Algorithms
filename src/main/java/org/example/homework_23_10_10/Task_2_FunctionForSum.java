@@ -1,4 +1,4 @@
-package org.example.homework_10_10_23;
+package org.example.homework_23_10_10;
 
 public class Task_2_FunctionForSum {
 //    Написать функцию sum(n, m), вычисляющую сумму тех чисел в диапазоне от 1 до n, которые делятся на m.

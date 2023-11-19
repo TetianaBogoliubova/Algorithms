@@ -1,4 +1,4 @@
-package org.example.homework_26_09_23;
+package org.example.homework_23_09_26;
 
 // 1. Написать рекурсивную функцию вычисления факториала factorial(n) - произведения всех
 // чисел до n включительно

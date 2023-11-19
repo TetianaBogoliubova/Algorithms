@@ -1,4 +1,4 @@
-package org.example.homework_31_10_23;
+package org.example.homework_23_10_31;
 
 public class CustomQueue {
     // Реализовать методы enqueue(), dequeue(), size() у класса CustomQueue (заготовки методов см. в репозитории).
@@ -50,7 +50,6 @@ public class CustomQueue {
             return -1;
         }
     }
-
     public boolean isEmpty() {
         return head == -1 || head > tail;
     }

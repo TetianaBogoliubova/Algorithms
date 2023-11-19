@@ -1,4 +1,4 @@
-package org.example.homework_17_10_23;
+package org.example.homework_23_10_17;
 
 //Самый дешёвый путь
 //    В каждой клетке прямоугольной таблицы N*M записано некоторое число.
