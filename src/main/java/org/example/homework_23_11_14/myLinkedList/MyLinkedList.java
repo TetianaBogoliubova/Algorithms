@@ -44,11 +44,11 @@ public class MyLinkedList {
             return false;
         }
         while (temp.getNext() != null) {
-           beforElement = temp;
+            beforElement = temp;
             temp = temp.getNext();
         }
         beforElement.setNext(null);
-        if (beforElement == null){
+        if (beforElement == null) {
             head = null;
         }
         return true;
